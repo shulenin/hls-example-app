@@ -17,7 +17,7 @@
 
         hls.autoLevelEnabled = true;
 
-        hls.loadSource('/storage/97DeVIoIsvUEQ5gmjklgC5GBQRm0MUbsxKqXKPfX.m3u8');
+        hls.loadSource('/storage/Mf35BP2R30IJIPQbRAlm5vo31frepC52Qy9AIfnL.m3u8');
         hls.attachMedia(video);
 
         hls.on(Hls.Events.LEVEL_SWITCHED, function(event, data) {

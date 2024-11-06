@@ -20,5 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/content/create', [ContentController::class, 'create']);
-Route::post('/content/convert', [ContentController::class, 'convert']);
 Route::post('/content/read', [ContentController::class, 'read']);
