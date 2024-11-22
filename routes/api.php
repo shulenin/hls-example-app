@@ -19,5 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/content/create', [ContentController::class, 'create']);
-Route::post('/content/read', [ContentController::class, 'read']);
+Route::prefix('/content')->group(function () {
+	Route::post('/create', [ContentController::class, 'upload']);
+	Route::get('/status/{fileName}', [ContentController::class, 'getConversionProgress']);
+	Route::get('/read/{filename}', [ContentController::class, 'read']);
+});
